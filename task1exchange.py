@@ -11,10 +11,6 @@ text = (
     "school - partner of GSOM SPbU has to be attached to the application."
 )
 
-# The address starts right after the first "(" and ends before ", Tel."
-start = text.find("(") + 1
-end = text.find(", Tel.")
-
-address = text[start:end]
+address = text[text.find("(") + 1:text.find(", Tel.")]
 
 print(address)
